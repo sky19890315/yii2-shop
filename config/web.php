@@ -6,6 +6,8 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+	'defaultRoute'  =>  'index',
+
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -16,7 +18,15 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
+	        'transport' => [
+              'class' => 'Swift_SmtpTransport',
+              'host' => 'smtp.163.com',
+              'username' => 'laravelsky@163.com',
+              'password' => 'sky19890315',
+              'port' => '465',
+              'encryption' => 'ssl',
+          ],
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -64,6 +74,13 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         'allowedIPs' => ['127.0.0.1','*', '::1'],
+    ];
+
+    /*
+     * 增加调用模块
+     */
+    $config['modules']['admin'] = [
+	    'class' => 'app\modules\admin',
     ];
 }
 
