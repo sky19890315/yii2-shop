@@ -10,7 +10,7 @@
 	<meta name="keywords" content="">
 	<meta name="robots" content="all">
 
-	<title>商品分类 - 慕课商城</title>
+	<title>商品分类 - 天空网络</title>
 
 	<!-- Bootstrap Core CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -44,17 +44,17 @@
 		<div class="container">
 			<div class="col-xs-12 col-sm-6 no-margin">
 				<ul>
-					<li><a href="index.html">首页</a></li>
-					<li><a href="category-grid.html">所有分类</a></li>
-					<li><a href="cart.html">我的购物车</a></li>
-					<li><a href="orders.html">我的订单</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['index/index']); ?>">首页</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['product/index']); ?>">所有分类</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['cart/index']); ?>">我的购物车</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['order/index']); ?>">我的订单</a></li>
 				</ul>
 			</div><!-- /.col -->
 
 			<div class="col-xs-12 col-sm-6 no-margin">
 				<ul class="right">
-					<li><a href="authentication.html">注册</a></li>
-					<li><a href="authentication.html">登录</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['user/reg']); ?>">注册</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['admin/public/login']); ?>">登录</a></li>
 				</ul>
 			</div><!-- /.col -->
 		</div><!-- /.container -->
@@ -75,10 +75,10 @@
 			<div class="col-xs-12 col-sm-12 col-md-6 top-search-holder no-margin">
 				<div class="contact-row">
 					<div class="phone inline">
-						<i class="fa fa-phone"></i> (+086) 123 456 7890
+						<i class="fa fa-phone"></i> (+086) 18807715598
 					</div>
 					<div class="contact inline">
-						<i class="fa fa-envelope"></i> contact@<span class="le-color">jason.com</span>
+						<i class="fa fa-envelope"></i> contact@<span class="le-color"><a href="http://sunkeyi.com.cn">sunkeyi.com.cn</a></span>
 					</div>
 				</div><!-- /.contact-row -->
 				<!-- ============================================================= SEARCH AREA ============================================================= -->

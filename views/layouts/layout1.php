@@ -10,7 +10,7 @@
 	<meta name="keywords" content="MediaCenter, Template, eCommerce">
 	<meta name="robots" content="all">
 
-	<title>慕课商城</title>
+	<title>天空网络</title>
 	<!-- Bootstrap Core CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
@@ -44,16 +44,16 @@
 		<div class="container">
 			<div class="col-xs-12 col-sm-6 no-margin">
 				<ul>
-					<li><a href="index.html">首页</a></li>
-					<li><a href="category-grid.html">所有分类</a></li>
-					<li><a href="cart.html">我的购物车</a></li>
-					<li><a href="orders.html">我的订单</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['index/index']); ?>">首页</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['product/index']); ?>">所有分类</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['cart/index']); ?>">我的购物车</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['order/index']); ?>">我的订单</a></li>
 				</ul>
 			</div><!-- /.col -->
 
 			<div class="col-xs-12 col-sm-6 no-margin">
 				<ul class="right">
-					<li><a href="authentication.html">注册</a></li>
+					<li><a href="<?php echo yii\helpers\Url::to(['user/reg']); ?>">注册</a></li>
 					<li><a href="<?php echo yii\helpers\Url::to(['admin/public/login']); ?>">登录</a></li>
 				</ul>
 			</div><!-- /.col -->
@@ -66,7 +66,7 @@
 			<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
 				<!-- ============================================================= LOGO ============================================================= -->
 				<div class="logo">
-					<a href="index.html">
+					<a href="<?php echo yii\helpers\Url::to(['index/index']); ?>">
 						<img alt="logo" src="assets/images/logo.PNG" width="233" height="54"/>
 					</a>
 				</div><!-- /.logo -->
@@ -75,10 +75,10 @@
 			<div class="col-xs-12 col-sm-12 col-md-6 top-search-holder no-margin">
 				<div class="contact-row">
 					<div class="phone inline">
-						<i class="fa fa-phone"></i> (+086) 123 456 7890
+						<i class="fa fa-phone"></i> (+086) 18807715598
 					</div>
 					<div class="contact inline">
-						<i class="fa fa-envelope"></i> contact@<span class="le-color">jason.com</span>
+						<i class="fa fa-envelope"></i> contact@<span class="le-color"> <a href="http://sunkeyi.com.cn">sunkeyi.com.cn</a></span>
 					</div>
 				</div><!-- /.contact-row -->
 				<!-- ============================================================= SEARCH AREA ============================================================= -->
@@ -430,8 +430,8 @@
                         <p class="regular-bold"> 请通过电话，电子邮件随时联系我们</p>
 
                         <p>
-                            西城区二环到三环德胜门外大街10号TCL大厦3层(马甸桥南), 北京市西城区, 中国
-                            <br>慕课网 (QQ群:416465236)
+                            广州市番禺区石楼镇
+                            <br>联系Q：296675685
                         </p>
 
                         <!--<div class="social-icons">
@@ -508,7 +508,7 @@
             <div class="container">
                 <div class="col-xs-12 col-sm-6 no-margin">
                     <div class="copyright">
-                        &copy; <a href="index.html">Imooc.com</a> - all rights reserved
+                        &copy; <a href="http://sunkeyi.com.cn">sunkeyi.com.cn</a> - all rights reserved
                     </div><!-- /.copyright -->
                 </div>
                 <div class="col-xs-12 col-sm-6 no-margin">

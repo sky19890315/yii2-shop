@@ -36,15 +36,15 @@ class Admin extends ActiveRecord
 		return [
 			['adminuser' ,'required', 'message' => '管理员账号不能为空' ,'on' => ['login', 'seekpass', 'adminadd','changeemail']],
 			['adminuser' ,'unique', 'message' => '管理员账号已经存在' ,'on' => ['seekpass', 'adminadd']],
-			['adminpasswd' ,'required', 'message' => '管理员密码不能为空', 'on' => ['login','adminadd','changeemail']] ,
+			['adminpasswd' ,'required', 'message' => '管理员密码不能为空', 'on' => ['login','adminadd','changeemail','changepass']] ,
 			['rememberMe', 'boolean', 'on' => 'login'],
 			['adminpasswd', 'validatePass' , 'on'   => ['login','changeemail']],
 			['adminemail' ,'required', 'message' => '管理员邮箱不能为空', 'on' => ['seekpass','adminadd','changeemail']],
 			['adminemail' ,'email', 'message' => '管理员邮箱格式不正确' ,'on' => ['seekpass','adminadd','changeemail']],
 			['adminemail' ,'unique', 'message' => '邮箱已经被注册' ,'on' => ['adminadd','changeemail']],
 			['adminemail', 'validateEmail','on' => 'seekpass'],
-			['repass', 'required', 'message' => '密码不能为空', 'on' => 'adminadd'],
-			['repass', 'compare','compareAttribute' => 'adminpasswd', 'message' => "密码不一致" ,'on' => 'adminadd'],
+			['repass', 'required', 'message' => '密码不能为空', 'on' => ['adminadd','changepass']],
+			['repass', 'compare','compareAttribute' => 'adminpasswd', 'message' => "密码不一致" ,'on' => ['adminadd','changepass']],
 
 		];
 	}
@@ -129,8 +129,7 @@ class Admin extends ActiveRecord
 		$this->scenario = 'adminadd';
 		if ($this->load($data) && $this->save()) {
 			return true;
-		}
-		else {
+		} else {
 			return false;
 		}
 	}
@@ -145,5 +144,17 @@ class Admin extends ActiveRecord
 		return false;
 
 	}
+
+	public function changePass($data)
+	{
+		$this->scenario = 'changepass';
+		if ($this->load($data) && $this->save()) {
+			return (bool)$this->updateAll(['adminpasswd' => $this->adminpasswd], 'adminuser = :user', [':user' => $this->adminuser]);
+		}
+		return false;
+	}
+
+
+
 
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>慕课商城 - 后台管理</title>
+    <title>天空网络 - 后台管理</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -42,7 +42,7 @@
             <span class="icon-bar"></span>
         </button>
 
-        <a class="brand" href="index.html" style="font-weight:700;font-family:Microsoft Yahei">慕课商城 - 后台管理</a>
+        <a class="brand" href="<?php echo yii\helpers\Url::to(['default/index']);?>" style="font-weight:700;font-family:Microsoft Yahei">天空网络 - 后台管理</a>
 
         <ul class="nav pull-right">
             <li class="hidden-phone">
@@ -137,7 +137,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo yii\helpers\Url::to(['manager/changeemail']); ?>">个人信息管理</a></li>
                     <li><a href="<?php echo yii\helpers\Url::to(['manager/changepass']); ?>">修改密码</a></li>
-                    <li><a href="#">订单管理</a></li>
+                    <li><a href="<?php echo yii\helpers\Url::to(['order/list']); ?>">订单管理</a></li>
                 </ul>
             </li>
             <li class="settings hidden-phone">
@@ -166,7 +166,7 @@
                 <div class="arrow"></div>
                 <div class="arrow_border"></div>
             </div>
-            <a href="index.html">
+            <a href="<?php echo yii\helpers\Url::to(['default/index']);?>">
                 <i class="icon-home"></i>
                 <span>后台首页</span>
             </a>
@@ -190,8 +190,8 @@
                 <i class="icon-chevron-down"></i>
             </a>
             <ul class="submenu">
-                <li><a href="/index.php?r=admin%2Fuser%2Fusers">用户列表</a></li>
-                <li><a href="/index.php?r=admin%2Fuser%2Freg">加入新用户</a></li>
+                <li><a href="<?php echo yii\helpers\Url::to(['user/users']);?>">用户列表</a></li>
+                <li><a href="<?php echo yii\helpers\Url::to(['user/reg']);?>">加入新用户</a></li>
             </ul>
         </li>
         <li>
@@ -201,8 +201,8 @@
                 <i class="icon-chevron-down"></i>
             </a>
             <ul class="submenu">
-                <li><a href="/index.php?r=admin%2Fcategory%2Flist">分类列表</a></li>
-                <li><a href="/index.php?r=admin%2Fcategory%2Fadd">加入分类</a></li>
+                <li><a href="<?php echo yii\helpers\Url::to(['category/cates']);?>">分类列表</a></li>
+                <li><a href="<?php echo yii\helpers\Url::to(['category/add']);?>">加入分类</a></li>
             </ul>
         </li>
         <li>
@@ -212,8 +212,8 @@
                 <i class="icon-chevron-down"></i>
             </a>
             <ul class="submenu">
-                <li><a href="/index.php?r=admin%2Fproduct%2Flist">商品列表</a></li>
-                <li><a href="/index.php?r=admin%2Fproduct%2Fadd">添加商品</a></li>
+                <li><a href="<?php echo yii\helpers\Url::to(['product/products']);?>">商品列表</a></li>
+                <li><a href="<?php echo yii\helpers\Url::to(['product/add']);?>">添加商品</a></li>
             </ul>
         </li>
         <li>
@@ -223,7 +223,7 @@
                 <i class="icon-chevron-down"></i>
             </a>
             <ul class="submenu">
-                <li><a href="/index.php?r=admin%2Forder%2Flist">订单列表</a></li>
+                <li><a href="<?php echo yii\helpers\Url::to(['order/list']);?>">订单列表</a></li>
             </ul>
         </li>
 
